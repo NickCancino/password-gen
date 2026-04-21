@@ -1,0 +1,65 @@
+body{
+    background-color: #1F2937;
+    display: flex;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    
+}
+.container {
+    width: 100%;
+    max-width: 750px;
+    background-color: #111827;
+    padding: 3%;
+    border-radius: 12px;
+}
+.title{
+    margin-top: 5%;
+}
+
+
+#generatetext{
+    color: aliceblue;
+    font-weight: bold;
+    margin: 0%;
+}
+#randpasstext{
+    color: #34D399;
+    font-weight: bold;
+    margin: 0px;
+}
+#subtitle{
+    color: rgb(206, 206, 206);
+    font-weight: 100;
+    margin-top: 1%;
+}
+.inputarea{
+    display: flex;
+    align-items: center; /* aligns them vertically */
+    gap: 10px;
+}
+#generatebutton{
+    background-color: #047857;
+    height: 45px;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-right: 5%;
+    font-weight: bolder;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#generatebutton:hover{
+    background-color: #054a37;
+}
+#usernum{
+    height: 45px;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 2%;
+    font-weight: bolder;
+}
+.line{
+    margin-top: 2rem;
+}
