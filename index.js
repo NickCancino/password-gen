@@ -5,8 +5,8 @@ const specialChars = "!@#$%^&*()-_=+[]{}|;:,.<>?/";
 const allChars = upperChars + lowerChars + numbers + specialChars;
 
 let userNum;
-let cBox1 = document.getElementById("copyBox1")
-let cBox2 = document.getElementById("copyBox2")
+let cBox1 = document.getElementById("copy-btn1")
+let cBox2 = document.getElementById("copy-btn2")
 const errorMsg = document.getElementById("errorMsg");
 
 document.getElementById("generatebutton").onclick = function passLength(){
@@ -42,7 +42,21 @@ function genArr(length) {
     return password;
 }
 
-
+document.querySelectorAll(".copy-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const text = btn.innerText; // ← FIX
+  
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          const original = text;
+          btn.innerText = "Copied!";
+          setTimeout(() => {
+            btn.innerText = original;
+          }, 1000);
+        })
+        .catch(() => console.log("Failed"));
+    });
+});
 
 
 
